@@ -24,7 +24,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: var(--azul-royal)
+  background: var(--branco)
 }
 
 @layer utilities {

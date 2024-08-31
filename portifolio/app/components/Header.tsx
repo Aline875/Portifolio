@@ -4,11 +4,11 @@ const Header: FC = () =>
 {
     return(
         <header className="bg-roxo-escuro text-branco py-4 ">
-            <div className=" containermx-auto flex items-center justify-center">
+            <div className=" container mx-auto flex items-center justify-center">
                 <nav className="flex space-x-4">
                     <Link href="/" className="hover:text-azul-claro">Home</Link>
                     <Link href="../SobreMim" className="hover:text-azul-claro">Sobre mim</Link>
-                    <Link href="#" className="hover:text-azul-claro">Projetos</Link>
+                    <Link href="../Projetos" className="hover:text-azul-claro">Projetos</Link>
                     <Link href="#" className="hover:text-azul-claro">Contato</Link>
                 </nav>
             </div>
