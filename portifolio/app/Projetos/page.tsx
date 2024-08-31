@@ -29,26 +29,27 @@ const Projetos: FC =()=>
     );
     
     return (
-        <div className="flex items-center justify-center min-h-screen bg-azul-claro rounded-lg">
-            <h1 className='text-roxo-escuro'>Meus projetos</h1>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+        <div className="container mx-auto py-8 bg-azul-claro rounded-lg ">
+            <h1 className='text-roxo-escuro font-bold mb-8 text-4xl'>Meus projetos</h1>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-8 m-4'>
                 {projetos.map((projeto) =>(
                     <div key={projeto.id} className='bg-cinza-claro p-6 rounded-lg shadow-lg'>
-                        <h2 className=''>{projeto.name}</h2>
-                        <p>{projeto.description || "Este projeto não contem descrição."}
+                        <h2 className='text-2xl text azul-royal font-semibold mb-4'>{projeto.name}</h2>
+                        <p className='text-lg text-toxo-escuro mb-6'>
+                            {projeto.description || "Este projeto não contem descrição."}
                         </p>
                     <div className='flex space-x-4'>
                         <Link href={projeto.html_url}
                             target='_blank'
                             rel='noopener norefeer'
-                            className='bg-azul-royal'>
+                            className='bg-azul-royal text-branco py-2  px-4 rounded hover:bg-azul-claro'>
                             GitHub
                         </Link>
                        {projeto.homepage && (
                          <Link href={projeto.homepage}
                             target='_blank'
                             rel='noopener norefeer'
-                            className='bg-azul-royal'>
+                            className='bg-azul-royal text-branco py-2  px-4 rounded hover:bg-azul-claro'>
                             Vercel
                         </Link>
                         )}
