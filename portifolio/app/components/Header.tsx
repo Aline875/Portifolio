@@ -9,7 +9,7 @@ const Header: FC = () =>
                     <Link href="/" className="hover:text-azul-claro">Home</Link>
                     <Link href="../SobreMim" className="hover:text-azul-claro">Sobre mim</Link>
                     <Link href="../Projetos" className="hover:text-azul-claro">Projetos</Link>
-                    <Link href="#" className="hover:text-azul-claro">Contato</Link>
+                    <Link href="../Contato" className="hover:text-azul-claro">Contato</Link>
                 </nav>
             </div>
         </header>

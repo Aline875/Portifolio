@@ -1,6 +1,8 @@
-"use client"
+"use client";
+
 import {FC, useEffect, useState} from 'react';
 import Link from 'next/link';
+import RootLayout from '../layout';
 const Projetos: FC =()=>
 {
 
