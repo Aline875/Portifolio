@@ -2,7 +2,7 @@
 
 import {FC, useEffect, useState} from 'react';
 import Link from 'next/link';
-import RootLayout from '../layout';
+import { Card, CardTitle, CardDescription, CardContent } from '@/components/ui/card'; 
 const Projetos: FC =()=>
 {
 
@@ -31,16 +31,16 @@ const Projetos: FC =()=>
     );
     
     return (
-        <div className="container mx-auto py-8 bg-azul-claro rounded-lg ">
-            <h1 className='text-roxo-escuro font-bold mb-8 text-4xl'>Meus projetos</h1>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-8 m-4'>
+        <Card className="container mx-auto py-8 bg-azul-claro rounded-lg ">
+            <CardTitle className='text-roxo-escuro font-bold mb-8 text-4xl'>Meus projetos</CardTitle>
+            <CardContent className='grid grid-cols-1 md:grid-cols-2 gap-8 m-4'>
                 {projetos.map((projeto) =>(
-                    <div key={projeto.id} className='bg-cinza-claro p-6 rounded-lg shadow-lg'>
-                        <h2 className='text-2xl text azul-royal font-semibold mb-4'>{projeto.name}</h2>
-                        <p className='text-lg text-toxo-escuro mb-6'>
+                    <Card key={projeto.id} className='bg-cinza-claro p-6 rounded-lg shadow-lg'>
+                        <CardTitle className='text-2xl text azul-royal font-semibold mb-4'>{projeto.name}</CardTitle>
+                        <CardDescription className='text-lg text-toxo-escuro mb-6'>
                             {projeto.description || "Este projeto não contem descrição."}
-                        </p>
-                    <div className='flex space-x-4'>
+                        </CardDescription>
+                    <CardDescription className='flex space-x-4'>
                         <Link href={projeto.html_url}
                             target='_blank'
                             rel='noopener norefeer'
@@ -55,11 +55,11 @@ const Projetos: FC =()=>
                             Vercel
                         </Link>
                         )}
-                    </div>
-                </div>
+                    </CardDescription>
+                </Card>
                 ))}
-            </div>
-        </div>
+            </CardContent>
+        </Card>
     );
 };
 
